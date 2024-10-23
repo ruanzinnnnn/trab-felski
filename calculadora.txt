@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    char operacao;
+    double num1, num2, resultado;
+
+    cout << "Calculadora Simples" << endl;
+    cout << "Digite a operação (+, -, *, /): ";
+    cin >> operacao;
+
+    cout << "Digite o primeiro número: ";
+    cin >> num1;
+    cout << "Digite o segundo número: ";
+    cin >> num2;
+
+    switch (operacao) {
+        case '+':
+            resultado = num1 + num2;
+            cout << "Resultado: " << resultado << endl;
+            break;
+        case '-':
+            resultado = num1 - num2;
+            cout << "Resultado: " << resultado << endl;
+            break;
+        case '*':
+            resultado = num1 * num2;
+            cout << "Resultado: " << resultado << endl;
+            break;
+        case '/':
+            if (num2 != 0) {
+                resultado = num1 / num2;
+                cout << "Resultado: " << resultado << endl;
+            } else {
+                cout << "Erro: Divisão por zero!" << endl;
+            }
+            break;
+        default:
+            cout << "Operação inválida!" << endl;
+    }
+
+    return 0;
+}
